@@ -1,9 +1,12 @@
 ﻿Public Class Form1
     Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         Dim g = e.Graphics
+        Dim rcPaint = New Rectangle(0, 0, ClientSize.Width, ClientSize.Height)
+        Dim oRedPen = New Pen(Color.Red, 5)
+        Dim oYellowBrush = Brushes.Yellow
         g.Clear(Color.Black)
-        g.DrawEllipse(Pens.Yellow, 0, 0, ClientSize.Width, ClientSize.Height)
-        g.FillEllipse(Brushes.Red, 0, 0, ClientSize.Width, ClientSize.Height)
+        g.DrawEllipse(oRedPen, 0, 0, ClientSize.Width, ClientSize.Height)
+        g.FillEllipse(oYellowBrush, 0, 0, ClientSize.Width, ClientSize.Height)
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
