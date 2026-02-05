@@ -5,8 +5,8 @@
         Dim oRedPen = New Pen(Color.Red, 5)
         Dim oYellowBrush = Brushes.Yellow
         g.Clear(Color.Black)
-        g.DrawEllipse(oRedPen, 0, 0, ClientSize.Width, ClientSize.Height)
-        g.FillEllipse(oYellowBrush, 0, 0, ClientSize.Width, ClientSize.Height)
+        g.DrawEllipse(oRedPen, rcPaint)
+        g.FillEllipse(oYellowBrush, rcPaint)
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
